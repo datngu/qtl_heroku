@@ -73,7 +73,7 @@ fluidPage(
         tags$footer("FOOTER OF THE PAGE.... WILL BE ADDED LATER", align = "center"),
         tags$footer("(c) 2022 Dat T Nguyen", align = "center")
       ) 
-    ),
+    )
     
     # tabPanel("Imputation performance",
     
@@ -98,10 +98,10 @@ fluidPage(
     #   ) 
     # ),
 
-    tabPanel("About", 
-      titlePanel("About"), 
-      div(includeMarkdown("about.md"), 
-      align="justify")
-    )
+    # tabPanel("About", 
+    #   titlePanel("About"), 
+    #   div(includeMarkdown("about.md"), 
+    #   align="justify")
+    # )
   )
 )

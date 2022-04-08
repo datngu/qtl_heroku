@@ -2,6 +2,25 @@ library(shiny)
 library(shinythemes)
 
 
+# functions and loading databases
+load_db <- function(db){
+  load(db)
+  return(database)
+}
+
+db_all = load_db("data_test/all_treatments.Rdata")
+db_8_16 = load_db("data_test/light_treatment_8_16.Rdata")
+db_12_12 = load_db("data_test/light_treatment_12_12.Rdata")
+db_ll = load_db("data_test/light_treatment_LL.Rdata")
+
+gene_list = intersect(names(db_all), names(db_8_16))
+gene_list = intersect(gene_list, names(db_12_12))
+gene_list = intersect(gene_list, names(db_ll))
+
+gene_list = as.list(gene_list)
+
+
+
 fluidPage(
   
   theme = shinytheme("united"),
